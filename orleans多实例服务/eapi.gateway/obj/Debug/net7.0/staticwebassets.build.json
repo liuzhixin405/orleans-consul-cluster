@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "m++4ggVMBJlLPvNOMGLsYKIlKG0NhfszwDD5CQegs70=",
+  "Source": "eapi.gateway",
+  "BasePath": "_content/eapi.gateway",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

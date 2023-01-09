@@ -1,0 +1,12 @@
+D:\GitHub\并发测试\orleans多实例服务\eapi.interfaces\bin\Debug\net7.0\eapi.interfaces.deps.json
+D:\GitHub\并发测试\orleans多实例服务\eapi.interfaces\bin\Debug\net7.0\eapi.interfaces.dll
+D:\GitHub\并发测试\orleans多实例服务\eapi.interfaces\bin\Debug\net7.0\eapi.interfaces.pdb
+D:\GitHub\并发测试\orleans多实例服务\eapi.interfaces\obj\Debug\net7.0\eapi.interfaces.csproj.AssemblyReference.cache
+D:\GitHub\并发测试\orleans多实例服务\eapi.interfaces\obj\Debug\net7.0\eapi.interfaces.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\并发测试\orleans多实例服务\eapi.interfaces\obj\Debug\net7.0\eapi.interfaces.AssemblyInfoInputs.cache
+D:\GitHub\并发测试\orleans多实例服务\eapi.interfaces\obj\Debug\net7.0\eapi.interfaces.AssemblyInfo.cs
+D:\GitHub\并发测试\orleans多实例服务\eapi.interfaces\obj\Debug\net7.0\eapi.interfaces.csproj.CoreCompileInputs.cache
+D:\GitHub\并发测试\orleans多实例服务\eapi.interfaces\obj\Debug\net7.0\eapi.interfaces.dll
+D:\GitHub\并发测试\orleans多实例服务\eapi.interfaces\obj\Debug\net7.0\refint\eapi.interfaces.dll
+D:\GitHub\并发测试\orleans多实例服务\eapi.interfaces\obj\Debug\net7.0\eapi.interfaces.pdb
+D:\GitHub\并发测试\orleans多实例服务\eapi.interfaces\obj\Debug\net7.0\ref\eapi.interfaces.dll

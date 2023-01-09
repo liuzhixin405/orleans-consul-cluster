@@ -1,0 +1,42 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/{url}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/consul/{url}",
+
+      "UpstreamHttpMethod": [ "Post", "Get" ],
+      "ServiceName": "test007_consul",
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      },
+      "UseServiceDiscovery": true,
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 5000
+      },
+      //"RateLimitOptions": {
+      //  "ClientWhitelist": [],
+      //  "EnableRateLimiting": true,
+      //  "Period": "5m",
+      //  "PeriodTimespan": 5,
+      //  "Limit": 5
+      //},
+      "FileCacheOptions": {
+        "TtlSeconds": 10
+      }
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://127.0.0.1:5010",
+    "ServiceDiscoveryProvider": {
+      "Host": "localhost",
+      "Port": 8500,
+      "Type": "Consul"
+    },
+    "RateLimitOptions": {
+      "QuotaExceededMessage": "Too many requests, maybe later? 11",
+      "HttpStatusCode": 4444
+    }
+  }
+}

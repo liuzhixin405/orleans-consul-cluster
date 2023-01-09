@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\eapi.gateway.props" />
+</Project>

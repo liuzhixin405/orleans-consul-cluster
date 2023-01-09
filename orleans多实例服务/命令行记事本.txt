@@ -5,7 +5,6 @@ dotnet eapi.dll   --urls="http://*:5008" --ip="127.0.0.1" --port="5008"   --Orle
 dotnet eapi.dll   --urls="http://*:5009" --ip="127.0.0.1" --port="5009"  --OrleansOptions:GatewayPort="30003"  --OrleansOptions:SiloPort="1114"  --weight=5
 
 
-dotnet exec --runtimeconfig myapp.runtimeconfig.json myapp.dll。
 
 consul启动走命令，应对闪退
 Consul.exe agent -dev

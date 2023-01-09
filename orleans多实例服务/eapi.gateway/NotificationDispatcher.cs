@@ -6,7 +6,6 @@ namespace eapi
 {
     internal class NotificationDispatcher : BackgroundService
     {
-       
         private readonly ILogger<NotificationDispatcher> logger;
         private readonly Channel<CreateOrderDto> channel;
         private readonly IServiceProvider serviceProvider;
@@ -26,7 +25,6 @@ namespace eapi
                 {
                     using (var scope = serviceProvider.CreateScope())
                     {
-
                         var client = scope.ServiceProvider.GetRequiredService<IClusterClient>();
                         var orderService = client.GetGrain<IOrderGrains>(Random.Shared.Next()); //设置为0导致指挥获取一个服务,随机的话就是多服务负载
                         //var orderService = client.GetGrain<IOrderGrains>(0);
