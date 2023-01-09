@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\并发测试\\orleans多实例服务\\eapi.interfaces\\eapi.interfaces.csproj": {}
+    "D:\\GitHub\\并发测试\\consul多实例服务\\eapiGateway\\eapiGateway.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\并发测试\\orleans多实例服务\\eapi.interfaces\\eapi.interfaces.csproj": {
+    "D:\\GitHub\\并发测试\\consul多实例服务\\eapiGateway\\eapiGateway.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\并发测试\\orleans多实例服务\\eapi.interfaces\\eapi.interfaces.csproj",
-        "projectName": "eapi.interfaces",
-        "projectPath": "D:\\GitHub\\并发测试\\orleans多实例服务\\eapi.interfaces\\eapi.interfaces.csproj",
+        "projectUniqueName": "D:\\GitHub\\并发测试\\consul多实例服务\\eapiGateway\\eapiGateway.csproj",
+        "projectName": "eapiGateway",
+        "projectPath": "D:\\GitHub\\并发测试\\consul多实例服务\\eapiGateway\\eapiGateway.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\并发测试\\orleans多实例服务\\eapi.interfaces\\obj\\",
+        "outputPath": "D:\\GitHub\\并发测试\\consul多实例服务\\eapiGateway\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,9 +40,25 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
-            "Microsoft.Orleans.Sdk": {
+            "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "Ocelot": {
+              "target": "Package",
+              "version": "[16.0.1, )"
+            },
+            "Ocelot.Provider.Consul": {
+              "target": "Package",
+              "version": "[16.0.1, )"
+            },
+            "Ocelot.Provider.Polly": {
+              "target": "Package",
+              "version": "[16.0.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
             }
           },
           "imports": [
@@ -57,6 +73,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

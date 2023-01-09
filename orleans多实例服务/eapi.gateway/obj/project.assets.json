@@ -1773,11 +1773,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\exercisebook\\并发测试\\orleans多实例服务\\eapi.gateway\\eapi.gateway.csproj",
+      "projectUniqueName": "D:\\GitHub\\并发测试\\orleans多实例服务\\eapi.gateway\\eapi.gateway.csproj",
       "projectName": "eapi.gateway",
-      "projectPath": "D:\\GitHub\\exercisebook\\并发测试\\orleans多实例服务\\eapi.gateway\\eapi.gateway.csproj",
+      "projectPath": "D:\\GitHub\\并发测试\\orleans多实例服务\\eapi.gateway\\eapi.gateway.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\exercisebook\\并发测试\\orleans多实例服务\\eapi.gateway\\obj\\",
+      "outputPath": "D:\\GitHub\\并发测试\\orleans多实例服务\\eapi.gateway\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1794,8 +1794,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\GitHub\\exercisebook\\并发测试\\orleans多实例服务\\eapi.interfaces\\eapi.interfaces.csproj": {
-              "projectPath": "D:\\GitHub\\exercisebook\\并发测试\\orleans多实例服务\\eapi.interfaces\\eapi.interfaces.csproj"
+            "D:\\GitHub\\并发测试\\orleans多实例服务\\eapi.interfaces\\eapi.interfaces.csproj": {
+              "projectPath": "D:\\GitHub\\并发测试\\orleans多实例服务\\eapi.interfaces\\eapi.interfaces.csproj"
             }
           }
         }

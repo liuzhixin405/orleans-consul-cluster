@@ -1,0 +1,160 @@
+////*****************************    ַ********************************
+//ocelot1.6 汾һ    ReRoutes     ֮  Routes
+//{
+//  "Routes": [
+//    {
+//      "DownstreamPathTemplate": "/api/{url}", //     ַ--url    
+//      "DownstreamScheme": "http",
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "localhost",
+//          "Port": 5008 //    ˿ 
+//        } //   Զ       и  ؾ   
+//      ],
+//      "UpstreamPathTemplate": "/gateway/{url}", //   ص ַ--url       //  ͻ Ļ    Լ Ȩ  Priority
+//      "UpstreamHttpMethod": [ "Get", "Post" ]
+//    }
+//  ]
+//}
+
+//*****************************   ַ  ʵ  ********************************
+//{
+//  "Routes": [
+//    {
+//      "DownstreamPathTemplate": "/api/{url}", //     ַ--url    
+//      "DownstreamScheme": "http",
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "localhost",
+//          "Port": 5007 //    ˿ 
+//        } //   Զ       и  ؾ   
+//      ],
+//      "UpstreamPathTemplate": "/T5007/{url}", //   ص ַ--url       //  ͻ Ļ    Լ Ȩ  Priority
+//      "UpstreamHttpMethod": [ "Get", "Post" ]
+//    },
+//    {
+//      "DownstreamPathTemplate": "/api/{url}", //     ַ--url    
+//      "DownstreamScheme": "http",
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "localhost",
+//          "Port": 5008 //    ˿ 
+//        }
+//      ],
+//      "UpstreamPathTemplate": "/T5008/{url}", //   ص ַ--url    
+//      "UpstreamHttpMethod": [ "Get", "Post" ]
+//    },
+//        {
+//      "DownstreamPathTemplate": "/api/{url}", //     ַ--url    
+//      "DownstreamScheme": "http",
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "localhost",
+//          "Port": 5009 //    ˿ 
+//        }
+//      ],
+//      "UpstreamPathTemplate": "/T5009/{url}", //   ص ַ--url    
+//      "UpstreamHttpMethod": [ "Get", "Post" ]
+//    }
+//  ]
+//}
+
+////*****************************    ַ  ʵ     ؾ   ********************************
+//{
+//  "Routes": [
+//    {
+//      "DownstreamPathTemplate": "/api/{url}", //     ַ--url    
+//      "DownstreamScheme": "http",
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "localhost",
+//          "Port": 5007 //    ˿ 
+//        } //   Զ       и  ؾ   
+//        ,
+//        {
+//          "Host": "localhost",
+//          "Port": 5008 //    ˿ 
+//        },
+//        {
+//          "Host": "localhost",
+//          "Port": 5009 //    ˿ 
+//        }
+//      ],
+//      "UpstreamPathTemplate": "/T500/{url}", //   ص ַ--url       //  ͻ Ļ    Լ Ȩ  Priority
+//      "UpstreamHttpMethod": [ "Get", "Post" ],
+//      "LoadBalancerOptions": {
+//        "Type": "RoundRobin" //  ѯ      LeastConnection-           ķ        NoLoadBalance     ؾ   
+//      }
+//    }
+//  ]
+//}
+
+
+////*****************************    ַ  ʵ     ؾ   +Consul********************************
+//{
+//  "Routes": [
+//    {
+//      "DownstreamPathTemplate": "/api/{url}", //     ַ--url    
+//      "DownstreamScheme": "http",
+//      "UpstreamPathTemplate": "/Gateway/{url}", //   ص ַ--url    
+//      "UpstreamHttpMethod": [ "Get", "Post" ],
+//      "ServiceName": "test007_consul", //consul        
+//      "LoadBalancerOptions": {
+//        "Type": "RoundRobin" //  ѯ      LeastConnection-           ķ        NoLoadBalance     ؾ   
+//      },
+//      "UseServiceDiscovery": true
+//    }
+//  ],
+//  "GlobalConfiguration": {
+//    "BaseUrl": "http://127.0.0.1:5000", //   ض    ַ     ôĬ ϲ  ܷ  ʣ    Ƿ  ʿ  Ŷ˿ 
+//    "ServiceDiscoveryProvider": {
+//      "Host": "localhost",
+//      "Port": 8500,
+//      "Type": "Consul" //  Consul ṩ      
+//    }
+//  }
+//}
+
+//*****************************    ַ  ʵ     ؾ   +Consul+Polly********************************
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/{url}", //     ַ--url    
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/consul/{url}", //   ص ַ--url    
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "ServiceName": "test007_consul", //consul        
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin" //  ѯ      LeastConnection-           ķ        NoLoadBalance     ؾ   
+      },
+      "UseServiceDiscovery": true,
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,    //      ٸ  쳣    
+        "DurationOfBreak": 5000,   //  ۶ϵ ʱ 䣬  λΪms
+        //"TimeoutValue": 2000      //           Ĵ   ʱ 䳬           罫        Ϊ  ʱ Ĭ  90      ע     󷵻 404
+      }, 
+      "RateLimitOptions": {
+        "ClientWhitelist": [], //      
+        "EnableRateLimiting": true,
+        "Period": "5m", //1s, 5m, 1h, 1d  jeffzhang
+        "PeriodTimespan": 5, //      ֮  ͻ  ˿       
+        "Limit": 5 //ͳ  ʱ                     
+      },
+      "FileCacheOptions": {
+        "TtlSeconds": 10
+      } //"    10m"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://127.0.0.1:5000", //   ض    ַ        ûɶ  
+    "ServiceDiscoveryProvider": {
+      "Host": "localhost",
+      "Port": 8500,
+      "Type": "Consul" //  Consul ṩ      
+    },
+    "RateLimitOptions": {
+      "QuotaExceededMessage": "Too many requests, maybe later? 11", //         ر  ض ʱ   ص   Ϣ
+      "HttpStatusCode": 4444 //         ر  ض ʱ   ص http status
+    }
+  }
+}

@@ -1,0 +1,11 @@
+多开服务
+
+dotnet eapi.dll   --urls="http://*:5007" --ip="127.0.0.1" --port="5007"  --weight=1
+dotnet eapi.dll   --urls="http://*:5008" --ip="127.0.0.1" --port="5008"  --weight=2
+dotnet eapi.dll   --urls="http://*:5009" --ip="127.0.0.1" --port="5009"  --weight=5
+
+
+consul启动走命令，应对闪退
+Consul.exe agent -dev
+
+dotnet eapi.gateway.dll   --urls="https://*:5000" --ip="127.0.0.1" --port="5000"  

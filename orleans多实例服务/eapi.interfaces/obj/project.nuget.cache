@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Mgq4SkTYTLPAr8LZQULImyUkKX57YCGlvuiOdmBpfnUAMPCsdT85zu7ffUv2JuAfFlWbxWjhowrnRX4yrOH3Fg==",
+  "dgSpecHash": "i8t9ldvjktA7YssT4wZLkh2ZZQddrFypjiQEztDpG4kHEjt5xvuzlHwJZ9Zp5C1ysx2GbKnQ3CGBTK9uG5eDkQ==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\exercisebook\\并发测试\\orleans多实例服务\\eapi.interfaces\\eapi.interfaces.csproj",
+  "projectFilePath": "D:\\GitHub\\并发测试\\orleans多实例服务\\eapi.interfaces\\eapi.interfaces.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\7.0.0\\microsoft.aspnetcore.connections.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",

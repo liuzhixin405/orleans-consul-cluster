@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IbyyUSZhTpwdANfurDNlSyFpaSGwoBspNTYp1hU9jq1Kmro74E/goIhq6ZifC+iJCS1Kz4OwFcvr9yO5/zMRcA==",
+  "dgSpecHash": "q+PJE+nxovcWg0gfNmCzqUTjv91GqIB/U7UXA52PBinkEWIIhfL1sENdw0pGy2axy6qutDGnR5830G3WXnRDTQ==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\exercisebook\\并发测试\\orleans多实例服务\\eapi.gateway\\eapi.gateway.csproj",
+  "projectFilePath": "D:\\GitHub\\并发测试\\orleans多实例服务\\eapi.gateway\\eapi.gateway.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\7.0.0\\microsoft.aspnetcore.connections.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.0\\microsoft.aspnetcore.openapi.7.0.0.nupkg.sha512",
