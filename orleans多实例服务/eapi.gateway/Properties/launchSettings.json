@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "eapi.gateway": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:49442;http://localhost:49444"
+    }
+  }
+}

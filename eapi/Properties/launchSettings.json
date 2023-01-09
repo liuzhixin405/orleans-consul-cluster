@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "eapi": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "https://localhost:52072;http://localhost:52073"
+    }
+  }
+}
